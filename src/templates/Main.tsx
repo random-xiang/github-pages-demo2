@@ -30,7 +30,7 @@ const Main = (props: IMainProps) => (
               </Link>
             </li>
             <li className="mr-6">
-              <Link href="/about/">
+              <Link href={`/about/`}>
                 <a>About</a>
               </Link>
             </li>

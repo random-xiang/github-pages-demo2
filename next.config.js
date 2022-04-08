@@ -5,10 +5,14 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const baseUrl = '';
 
+const { ON_GITHUB_PAGES } = process.env;
+
+const basePath = '/github-pages-demo2';
+const assetPrefix = '/github-pages-demo2/';
+
 module.exports = withBundleAnalyzer({
   poweredByHeader: false,
   trailingSlash: true,
-  basePath: baseUrl,
   env: {
     baseUrl,
   },
@@ -16,5 +20,6 @@ module.exports = withBundleAnalyzer({
   // So, the source code is "basePath-ready".
   // You can remove `basePath` if you don't need it.
   reactStrictMode: true,
-  assetPrefix: '/github-pages-demo2/',
+  basePath,
+  assetPrefix,
 });
